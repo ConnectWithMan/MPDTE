@@ -41,7 +41,16 @@
         gtag('config', 'G-8MTSYCKGSG');
     </script>
 
-
+<script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+<script>
+  window.OneSignalDeferred = window.OneSignalDeferred || [];
+  OneSignalDeferred.push(async function(OneSignal) {
+    await OneSignal.init({
+      appId: "b2c93260-f939-45db-87a4-e4e85305064b",
+    });
+  });
+</script>
+    
     <script type="application/ld+json">
         {
           "@context": "https://schema.org",
