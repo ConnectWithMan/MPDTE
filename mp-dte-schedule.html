@@ -996,12 +996,54 @@
         .footer-menu a:hover {
             color: var(--primary-color);
         }
+
+                /* Top Ticker Announcement */
+        .top-ticker {
+            background: #fbff00;
+            color: var(--text-dark);
+            text-align: center;
+            padding: 10px 15px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            position: relative;
+            z-index: 1001;
+            /* Make sure it stays on top */
+            letter-spacing: 0.5px;
+        }
+
+        .top-ticker a {
+            color: var(--text-dark);
+            text-decoration: none;
+            margin-left: 12px;
+            background: rgb(255, 251, 0);
+            padding: 4px 14px;
+            border: 1px solid black;
+            border-radius: 20px;
+            transition: background 0.3s ease, transform 0.2s ease;
+            display: inline-block;
+            font-size: 0.85rem;
+        }
+
+        .top-ticker a:hover {
+            background: rgba(180, 180, 180, 0.15);
+            color: var(--text-dark);
+        }
+
+        @media (max-width: 575px) {
+            .top-ticker {
+                font-size: 0.85rem;
+                padding: 8px 10px;
+            }
+        }
+
     </style>
 </head>
 
 <body>
 
-
+    <div class="top-ticker">
+        ⚡ MP DTE College Predictor 2026 is now live! <a href="https://www.famral.com/mp-dte-college-predictor" target="_blank" rel="noopener">Predict Now</a>
+    </div>
     <header>
         <nav class="navbar">
             <a href="/" class="nav-branding">MP DTE Counselling</a>
