@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,13 +9,14 @@
         content="Detailed step-by-step guide for the MP DTE Counselling Process 2026. Learn about registration, document verification, choice filling, seat allotment, and reporting.">
     <meta name="keywords"
         content="mp dte counselling process, mp dte registration, mp dte document verification, mp dte choice filling, mp dte seat allotment">
-    
+
     <!-- Canonical URL (Technical SEO) -->
     <link rel="canonical" href="https://mpdtecounselling.in/mp-dte-counselling-process" />
 
     <!-- Open Graph / Social SEO -->
     <meta property="og:title" content="MP DTE Counselling Process 2026: Step-by-Step Guide">
-    <meta property="og:description" content="Detailed step-by-step guide for the MP DTE Counselling Process 2026. Learn about registration, document verification, choice filling, seat allotment, and reporting.">
+    <meta property="og:description"
+        content="Detailed step-by-step guide for the MP DTE Counselling Process 2026. Learn about registration, document verification, choice filling, seat allotment, and reporting.">
     <meta property="og:url" content="https://mpdtecounselling.in/mp-dte-counselling-process">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://placehold.co/1200x630/960096/fff?text=MP+DTE">
@@ -31,16 +31,24 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500&display=swap"
         rel="stylesheet">
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-8MTSYCKGSG"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8MTSYCKGSG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-  gtag('config', 'G-8MTSYCKGSG');
-</script>
-
+        gtag('config', 'G-8MTSYCKGSG');
+    </script>
+    <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+    <script>
+        window.OneSignalDeferred = window.OneSignalDeferred || [];
+        OneSignalDeferred.push(async function (OneSignal) {
+            await OneSignal.init({
+                appId: "b2c93260-f939-45db-87a4-e4e85305064b",
+            });
+        });
+    </script>
 
     <script type="application/ld+json">
         {
@@ -52,7 +60,7 @@
           "url": "https://mpdtecounselling.in/mp-dte-counselling-process"
         }
     </script>
-    
+
     <script type="application/ld+json">
         {
           "@context": "https://schema.org",
@@ -77,6 +85,27 @@
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "No, once the choices are locked, they cannot be modified. Make sure to review them carefully before locking."
+            }
+          }, {
+            "@type": "Question",
+            "name": "What is the Tuition Fee Waiver (TFW) scheme and who is eligible?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The TFW scheme is an MP government initiative that waives 100% of the tuition fee for eligible students. To qualify, you must be a resident of Madhya Pradesh, your total family income must be less than Rs. 8 Lakhs per annum, and you must apply for TFW during registration."
+            }
+          }, {
+            "@type": "Question",
+            "name": "Can I participate in Round 2 if I am satisfied with my Round 1 seat?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "If you are satisfied, you should Freeze the seat and complete the admission. If you participate in Round 2 and get allocated a new seat, your Round 1 seat will be cancelled automatically. Only participate in Round 2 if you want an upgrade."
+            }
+          }, {
+            "@type": "Question",
+            "name": "How does College Level Counselling (CLC) round work?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "CLC is the final spot admission phase conducted directly at the individual college campus. Candidates must physically report to the college of their choice with all original documents and fees. Seats are offered on the spot based on the merit list of candidates present on that specific day."
             }
           }]
         }
@@ -955,6 +984,404 @@
         .footer-menu a:hover {
             color: var(--primary-color);
         }
+
+        /* Timeline Stepper styling */
+        .timeline-stepper {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            position: relative;
+            margin: 40px 0;
+            gap: 20px;
+        }
+
+        .timeline-stepper::before {
+            content: '';
+            position: absolute;
+            top: 25px;
+            left: 5%;
+            width: 90%;
+            height: 4px;
+            background: var(--border-color);
+            z-index: 1;
+        }
+
+        .timeline-step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            flex: 1;
+            position: relative;
+            z-index: 2;
+        }
+
+        .step-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--bg-white);
+            border: 4px solid var(--border-color);
+            color: var(--text-medium);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .timeline-step.active .step-icon {
+            background: var(--primary-color);
+            border-color: var(--primary-color);
+            color: var(--text-light);
+            box-shadow: 0 0 0 6px rgba(30, 58, 138, 0.15);
+        }
+
+        .step-title {
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--text-dark);
+            margin-bottom: 6px;
+        }
+
+        .step-desc {
+            font-size: 0.85rem;
+            color: var(--text-medium);
+            line-height: 1.4;
+            max-width: 180px;
+        }
+
+        /* Eligibility Cards custom style */
+        .eligibility-card {
+            text-align: left !important;
+            padding: 2rem 1.5rem !important;
+        }
+
+        .card-icon-wrapper {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .card-icon-wrapper.blue {
+            background-color: rgba(30, 58, 138, 0.1);
+            color: var(--primary-color);
+        }
+
+        .card-icon-wrapper.orange {
+            background-color: rgba(234, 88, 12, 0.1);
+            color: var(--secondary-color);
+        }
+
+        .card-icon-wrapper.amber {
+            background-color: rgba(217, 119, 6, 0.1);
+            color: var(--accent-color);
+        }
+
+        .eligibility-tag {
+            margin-top: auto;
+            display: inline-block;
+            background: var(--bg-light);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-medium);
+            align-self: flex-start;
+            border: 1px solid var(--border-light);
+        }
+
+        /* Checklist Widget Styles */
+        .checklist-container {
+            background: var(--bg-white);
+            border-radius: var(--border-radius-md);
+            padding: 30px;
+            box-shadow: var(--shadow-md);
+            max-width: 900px;
+            margin: 0 auto;
+            border: 1px solid var(--border-light);
+        }
+
+        .checklist-progress-bar-wrapper {
+            margin-bottom: 25px;
+        }
+
+        .checklist-progress-text {
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--text-dark);
+            font-size: 1rem;
+        }
+
+        .checklist-progress-bg {
+            background-color: var(--bg-light);
+            height: 12px;
+            border-radius: 6px;
+            overflow: hidden;
+            width: 100%;
+            border: 1px solid var(--border-light);
+        }
+
+        .checklist-progress-fill {
+            background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            height: 100%;
+            width: 0%;
+            transition: width 0.4s cubic-bezier(0.1, 0.8, 0.3, 1);
+            border-radius: 6px;
+        }
+
+        .checklist-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 20px;
+        }
+
+        .checklist-item {
+            background-color: var(--bg-light);
+            border: 1px solid var(--border-light);
+            border-radius: var(--border-radius-sm);
+            padding: 15px;
+            transition: all 0.2s ease;
+        }
+
+        .checklist-item:hover {
+            box-shadow: var(--shadow-sm);
+            border-color: #cbd5e1;
+        }
+
+        .checkbox-label {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .checkbox-label input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+        }
+
+        .checkbox-custom {
+            height: 22px;
+            width: 22px;
+            background-color: var(--bg-white);
+            border: 2px solid var(--border-color);
+            border-radius: 4px;
+            flex-shrink: 0;
+            position: relative;
+            transition: all 0.2s;
+            margin-top: 2px;
+        }
+
+        .checkbox-label:hover input~.checkbox-custom {
+            border-color: var(--primary-color);
+        }
+
+        .checkbox-label input:checked~.checkbox-custom {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+
+        .checkbox-custom::after {
+            content: "";
+            position: absolute;
+            display: none;
+            left: 7px;
+            top: 3px;
+            width: 5px;
+            height: 10px;
+            border: solid white;
+            border-width: 0 2.5px 2.5px 0;
+            transform: rotate(45deg);
+        }
+
+        .checkbox-label input:checked~.checkbox-custom::after {
+            display: block;
+        }
+
+        .doc-details {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .doc-name {
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: var(--text-dark);
+            margin-bottom: 2px;
+            transition: color 0.2s;
+        }
+
+        .checkbox-label input:checked~.doc-details .doc-name {
+            color: var(--text-medium);
+            text-decoration: line-through;
+        }
+
+        .doc-desc {
+            font-size: 0.8rem;
+            color: var(--text-medium);
+            line-height: 1.3;
+        }
+
+        /* Helpline Section Styling */
+        .helpline-card {
+            background: var(--bg-white);
+            border-radius: var(--border-radius-md);
+            box-shadow: var(--shadow-lg);
+            padding: 35px;
+            border: 1px solid var(--border-light);
+            margin: 20px auto;
+        }
+
+        .helpline-header h2 {
+            margin-top: 0;
+            color: var(--primary-color);
+            font-size: 1.8rem;
+        }
+
+        .helpline-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 25px;
+        }
+
+        .helpline-item h4 {
+            color: var(--text-dark);
+            margin-top: 0;
+            margin-bottom: 8px;
+            font-size: 1.15rem;
+            font-weight: 600;
+        }
+
+        .helpline-item p {
+            font-size: 0.95rem;
+            color: var(--text-medium);
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 767px) {
+            .timeline-stepper {
+                flex-direction: column;
+                align-items: stretch;
+                margin-left: 20px;
+            }
+
+            .timeline-stepper::before {
+                top: 0;
+                left: 21px;
+                width: 4px;
+                height: 100%;
+            }
+
+            .timeline-step {
+                flex-direction: row;
+                text-align: left;
+                align-items: center;
+                gap: 15px;
+                margin-bottom: 25px;
+            }
+
+            .timeline-step:last-child {
+                margin-bottom: 0;
+            }
+
+            .step-icon {
+                margin-bottom: 0;
+                flex-shrink: 0;
+            }
+
+            .step-desc {
+                max-width: 100%;
+            }
+
+            .checklist-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Callout alert boxes */
+        .callout-box {
+            border-left: 4px solid;
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 0 var(--border-radius-sm) var(--border-radius-sm) 0;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .callout-box.info {
+            background-color: rgba(30, 58, 138, 0.05);
+            border-color: var(--primary-color);
+            color: var(--text-dark);
+        }
+
+        .callout-box.warning {
+            background-color: rgba(234, 88, 12, 0.05);
+            border-color: var(--secondary-color);
+            color: var(--text-dark);
+        }
+
+        .callout-title {
+            font-weight: 700;
+            margin-bottom: 5px;
+            color: var(--text-dark);
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+        }
+
+        .callout-box.info .callout-title {
+            color: var(--primary-color);
+        }
+
+        .callout-box.warning .callout-title {
+            color: var(--secondary-color);
+        }
+
+        /* Mini spec table styling */
+        .spec-table {
+            width: 100%;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            font-size: 0.85rem;
+            border-radius: var(--border-radius-sm);
+            overflow: hidden;
+            border: 1px solid var(--border-light);
+            border-collapse: collapse;
+        }
+
+        .spec-table th,
+        .spec-table td {
+            padding: 10px 15px;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .spec-table th {
+            background-color: #F1F5F9;
+            color: var(--primary-color);
+            text-align: left;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 0.5px;
+            font-weight: 700;
+        }
+
+        .spec-table tr:last-child td {
+            border-bottom: none;
+        }
     </style>
 </head>
 
@@ -1044,8 +1471,7 @@
                     <h4>Registration • Choice Filling • Seat Allotment</h4>
                 </div>
                 <div class="hero-img">
-                    <img src="https://placehold.co/400x300/960096/fff?text=MP+DTE"
-                        alt="MP DTE 2026 Counselling Process"
+                    <img src="https://placehold.co/400x300/960096/fff?text=MP+DTE" alt="MP DTE 2026 Counselling Process"
                         width="400" height="300"
                         onerror="this.onerror=null;this.src='https://placehold.co/400x300/960096/fff?text=MP+DTE';">
                 </div>
@@ -1058,11 +1484,83 @@
         <div class="container">
             <h2 class="section-title">Overview of the Counselling Process</h2>
             <p>
-                The <b>MP DTE Counselling Process</b> is a completely online procedure that facilitates admissions into various technical courses like B.E./B.Tech and B.Arch in Madhya Pradesh. Candidates must participate in this centralized counselling based on their JEE Main merit.
+                The <b>MP DTE Counselling Process</b> is a completely online procedure that facilitates admissions into
+                various technical courses like B.E./B.Tech and B.Arch in Madhya Pradesh. Candidates must participate in
+                this centralized counselling based on their JEE Main merit.
             </p>
             <p>
-                The process consists of multiple rounds, each involving specific steps that must be completed within stipulated deadlines. Below is a detailed breakdown of each phase of the counselling process.
+                The process consists of multiple rounds, each involving specific steps that must be completed within
+                stipulated deadlines. Below is a detailed breakdown of each phase of the counselling process.
             </p>
+
+            <!-- TIMELINE STEPPER -->
+            <div class="timeline-stepper">
+                <div class="timeline-step active">
+                    <div class="step-icon">1</div>
+                    <div class="step-title">Online Registration</div>
+                    <div class="step-desc">Enter details, upload docs, pay fee</div>
+                </div>
+                <div class="timeline-step active">
+                    <div class="step-icon">2</div>
+                    <div class="step-title">Document Verification</div>
+                    <div class="step-desc">Online status check or Help Centre visit</div>
+                </div>
+                <div class="timeline-step active">
+                    <div class="step-icon">3</div>
+                    <div class="step-title">Choice Filling & Locking</div>
+                    <div class="step-desc">Arrange college preferences & lock choices</div>
+                </div>
+                <div class="timeline-step active">
+                    <div class="step-icon">4</div>
+                    <div class="step-title">Seat Allotment</div>
+                    <div class="step-desc">Check results & download allotment letter</div>
+                </div>
+                <div class="timeline-step active">
+                    <div class="step-icon">5</div>
+                    <div class="step-title">Physical Reporting</div>
+                    <div class="step-desc">Report to college, pay fee, finalize seat</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ELIGIBILITY CRITERIA -->
+    <section class="section" style="background: var(--bg-white);">
+        <div class="container">
+            <h2 class="section-title">Eligibility Criteria for MP DTE B.Tech Admission</h2>
+            <p style="text-align: center; max-width: 700px; margin: 0 auto 30px auto;">
+                Make sure you meet the following baseline requirements before initiating your registration on the DTE MP
+                portal.
+            </p>
+            <div class="cards-grid">
+                <div class="card eligibility-card">
+                    <div class="card-icon-wrapper blue">
+                        🎓
+                    </div>
+                    <h3>Academic Qualification</h3>
+                    <p>Passed 10+2 (Class 12) or equivalent exam with Physics and Mathematics as compulsory subjects,
+                        along with Chemistry/Biotechnology/Biology/Technical Vocational subject.</p>
+                    <div class="eligibility-tag">Min. 45% (40% for SC/ST/OBC)</div>
+                </div>
+                <div class="card eligibility-card">
+                    <div class="card-icon-wrapper orange">
+                        📝
+                    </div>
+                    <h3>JEE Main Rank</h3>
+                    <p>Round 1 of counselling is exclusively conducted based on JEE Main CRL (Common Rank List) ranks.
+                        Non-JEE candidates are eligible to apply in later rounds based on Class 12 marks.</p>
+                    <div class="eligibility-tag">JEE Main Score Required</div>
+                </div>
+                <div class="card eligibility-card">
+                    <div class="card-icon-wrapper amber">
+                        🏠
+                    </div>
+                    <h3>Domicile Rules</h3>
+                    <p>90% of the total seats in Government and Government-aided colleges are reserved for candidates
+                        holding MP Domicile. 10% seats are open for Outside Madhya Pradesh (All India) candidates.</p>
+                    <div class="eligibility-tag">MP Domicile / All India</div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -1071,15 +1569,40 @@
         <div class="container">
             <h2 class="section-title">Step 1: Online Registration</h2>
             <p>
-                <a href="/mp-dte-registration" style="text-decoration: underline;">Registration</a> is the mandatory first step to participate in the counselling.
+                <a href="/mp-dte-registration" style="text-decoration: underline;">Registration</a> is the mandatory
+                first step to participate in the counselling. It is a fully online process where you establish your
+                candidature.
             </p>
             <ul>
-                <li>Visit the official DTE MP counselling portal.</li>
-                <li>Register using your JEE Main Roll Number and Date of Birth.</li>
-                <li>Fill in your personal, academic, and contact details accurately.</li>
-                <li>Upload necessary documents like photograph and signature in the prescribed format.</li>
-                <li>Pay the non-refundable counselling fee online (approx. Rs. 2800/- for unreserved categories).</li>
+                <li><strong>Official Portal Access:</strong> Visit the official DTE MP counselling portal (<a
+                        href="https://dte.mponline.gov.in" target="_blank" rel="noopener">dte.mponline.gov.in</a>) and
+                    navigate to the B.Tech section.</li>
+                <li><strong>Verification of JEE Details:</strong> Register using your <b>JEE Main Roll Number</b> and
+                    <b>Date of Birth</b>. The portal will automatically pull your JEE scores and rank.
+                </li>
+                <li><strong>Personal & Domicile Details:</strong> Fill in your personal information, address, and select
+                    your domicile status (MP Domicile vs. All India). Domicile status cannot be changed after
+                    registration closes.</li>
+                <li><strong>Academic Information:</strong> Enter details of your Class 10th (for DOB proof) and Class
+                    12th examinations (marks/grades).</li>
+                <li><strong>Category & Benefit Options:</strong> Declare your category (SC/ST/OBC/EWS) and choose
+                    whether you wish to apply under sub-categories like Tuition Fee Waiver (TFW), Freedom Fighter (FF),
+                    Soldier (S), or Physically Handicapped (PH).</li>
+                <li><strong>Bank Account Details:</strong> Provide active bank account details (account holder name,
+                    account number, IFSC code). This is crucial for receiving refunds in case of seat cancellation or
+                    withdrawal.</li>
+                <li><strong>Document Uploads:</strong> Upload a recent passport-sized photograph and your signature in
+                    the prescribed format.</li>
+                <li><strong>Counselling Fee:</strong> Pay the non-refundable registration and counselling fee online
+                    using Net Banking, Debit/Credit Card, or UPI (approx. <b>Rs. 2,800/-</b> for general/unreserved
+                    categories).</li>
             </ul>
+            <div class="callout-box warning">
+                <div class="callout-title">⚠️ CRITICAL REGISTRATION WARNING</div>
+                Use a mobile number and email address that are active and easily accessible to you. DTE MP will send all
+                vital OTPs (for registration and choice locking) and final seat allotment notifications to this mobile
+                number. You cannot change this number later in the counselling cycle.
+            </div>
         </div>
     </section>
 
@@ -1088,13 +1611,69 @@
         <div class="container">
             <h2 class="section-title">Step 2: Document Verification</h2>
             <p>
-                After registration, candidates' documents are verified to confirm their eligibility.
+                After registration, the uploaded certificates are cross-checked by the DTE verification officers to
+                confirm eligibility.
             </p>
             <ul>
-                <li>In most cases, document verification is done <b>online</b> based on the details and documents uploaded during registration.</li>
-                <li>Candidates will receive an SMS/Email confirming successful verification.</li>
-                <li>If there are discrepancies, candidates might be asked to re-upload documents or visit a help center (nodal center) for offline verification.</li>
+                <li><strong>Automatic & Online Verification:</strong> Most candidates have their documents verified
+                    <b>completely online</b>. The portal cross-references details with Madhya Pradesh state database
+                    (like caste and domicile status).
+                </li>
+                <li><strong>Verification Receipt:</strong> Once approved, a digital "Verification Slip" is generated in
+                    your candidate login dashboard. Download this slip, as it is a required document for final
+                    reporting.</li>
+                <li><strong>Nodal Center Visits:</strong> If the online officer finds a discrepancy (e.g. illegible
+                    certificate, mismatch in name spelling, missing documents), your verification status will change to
+                    "Objection Raised." You will need to immediately resolve the issue online or visit a government
+                    helpline nodal center physically.</li>
             </ul>
+
+            <h4 style="margin-top: 20px; color: var(--primary-color);">Document Upload Guidelines</h4>
+            <div class="table-responsive" style="margin-top: 10px;">
+                <table class="spec-table">
+                    <thead>
+                        <tr>
+                            <th>Document Type</th>
+                            <th>Supported File Format</th>
+                            <th>Allowed Size Range</th>
+                            <th>Crucial Criteria</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Candidate Photograph</td>
+                            <td>JPEG / JPG</td>
+                            <td>10 KB - 100 KB</td>
+                            <td>Clear background, front facing, no hats/glasses.</td>
+                        </tr>
+                        <tr>
+                            <td>Class 10th & 12th Marksheets</td>
+                            <td>PDF / JPEG</td>
+                            <td>50 KB - 150 KB</td>
+                            <td>Must show name, board name, roll number, and subject marks clearly.</td>
+                        </tr>
+                        <tr>
+                            <td>Domicile / Caste Certificate</td>
+                            <td>PDF / JPEG</td>
+                            <td>50 KB - 200 KB</td>
+                            <td>Must have a valid digital signature and barcode verification number.</td>
+                        </tr>
+                        <tr>
+                            <td>Income Certificate</td>
+                            <td>PDF / JPEG</td>
+                            <td>50 KB - 150 KB</td>
+                            <td>Must be issued by competent revenue authorities within the active fiscal year.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="callout-box warning">
+                <div class="callout-title">⚠️ THE "OBJECTION" ALERT</div>
+                Check your candidate portal daily! If an objection is raised on any uploaded document, you must upload a
+                corrected version or submit a correction grievance within 24 to 48 hours. Failing to resolve an
+                objection in time will lead to candidate disqualification from that round.
+            </div>
         </div>
     </section>
 
@@ -1103,14 +1682,41 @@
         <div class="container">
             <h2 class="section-title">Step 3: Choice Filling and Locking</h2>
             <p>
-                This is a critical step where candidates select their preferred colleges and branches.
+                This is the most critical step in the entire DTE counselling. Your final seat allotment depends heavily
+                on how wisely you order and lock your college preferences.
             </p>
             <ul>
-                <li>Log in to your account after successful document verification.</li>
-                <li>View the list of available colleges and branches based on your eligibility.</li>
-                <li>Select and arrange your choices in the order of priority. (It is highly recommended to fill in maximum choices to increase allotment chances).</li>
-                <li>Review the selected choices carefully and <b>lock</b> them before the deadline. If not manually locked, choices will be auto-locked at the deadline.</li>
+                <li><strong>Accessing the Choice Dashboard:</strong> Log in to the MP DTE portal after your online
+                    verification is complete. Navigate to "Choice Filling."</li>
+                <li><strong>Exhaustive Choices:</strong> You will see a list of all participating government,
+                    government-aided, and private engineering colleges. Select as many choices as possible. Selecting
+                    only 2 or 3 choices increases the risk of receiving zero allotments.</li>
+                <li><strong>Tuition Fee Waiver (TFW) Option:</strong> If you are an MP domicile candidate with family
+                    income under Rs. 8 Lakhs per annum and opted for TFW during registration, you can select TFW seats
+                    (e.g. `SGSITS Indore - CS (TFW)`). These seats charge Rs. 0 tuition fee! They should be placed high
+                    on your priority list.</li>
+                <li><strong>Prioritization Strategy:</strong> Arrange your choices in strict decreasing order of your
+                    personal preference. Place your dream branches/colleges at the top, followed by realistic options,
+                    and fallback options at the bottom. The allotment system evaluates choices from top to bottom.</li>
+                <li><strong>Saving & Previewing:</strong> Regularly click "Save Choices" to prevent session timeouts.
+                    Thoroughly review the final order in the preview panel before proceeding.</li>
+                <li><strong>Final Choice Locking:</strong> Lock your choices before the round's deadline. Choice locking
+                    requires verification via a <b>One-Time Password (OTP)</b> sent to your registered mobile number.
+                </li>
             </ul>
+            <div class="callout-box info">
+                <div class="callout-title">💡 GOLDEN RULE OF CHOICE FILLING</div>
+                "Put what you want first, not what you think you will get." The computer system checks your options
+                starting from Option 1 downwards. If you qualify for Option 1, you get it. If you put a lower preferred
+                college at Option 1 just because you expect to get it, the system will allocate it to you immediately,
+                and your higher preferences will be ignored!
+            </div>
+            <div class="callout-box warning">
+                <div class="callout-title">⚠️ WARNING: LOCKING IS ABSOLUTE</div>
+                Once choices are locked and the OTP is submitted, they cannot be edited, reordered, or deleted under any
+                circumstances. If you forget to lock your choices, the system will auto-lock your last saved choices
+                when the deadline expires.
+            </div>
         </div>
     </section>
 
@@ -1119,13 +1725,37 @@
         <div class="container">
             <h2 class="section-title">Step 4: Seat Allotment</h2>
             <p>
-                Based on merit and choices filled, the authority will release the seat allotment results.
+                At the end of the choice-locking period, DTE runs the automated allocation algorithm based on candidate
+                ranks, locked preferences, and seat reservations.
             </p>
             <ul>
-                <li>The allotment is purely based on the candidate's JEE Main Rank, reservation category, and the priority of choices locked.</li>
-                <li>Candidates can check their allotment status by logging into the portal.</li>
-                <li>If a seat is allotted, an <b>Allotment Letter</b> will be generated which must be downloaded.</li>
+                <li><strong>Allotment Result Declaration:</strong> DTE MP publishes the seat allotment list on the
+                    portal. Candidates must log in using their credentials to view their individual seat allotment
+                    status.</li>
+                <li><strong>Downloading Allotment Letter:</strong> If you are allocated a seat, you can download your
+                    provisional <b>Allotment Letter</b>. This document contains the name of the allotted college,
+                    branch, and category of allotment.</li>
+                <li><strong>Seat Acceptance Fee:</strong> To reserve the seat, candidates must pay a partial tuition fee
+                    (typically <b>Rs. 10,000/-</b> or as specified by DTE) online via the DTE portal. <i>Failure to pay
+                        this fee within the deadline will result in immediate cancellation of the seat allotment, and
+                        you will be barred from further normal rounds.</i></li>
+                <li><strong>Choice Decisions:</strong> After paying the fee, you must choose one of the following paths:
+                    <ul>
+                        <li><strong>Freeze:</strong> You are satisfied with the current seat. You accept it and will
+                            report to the college to secure admission.</li>
+                        <li><strong>Upward Movement (Float):</strong> You accept the current seat as a security, but
+                            want to participate in the next round for a chance to upgrade to one of your higher-priority
+                            choices. If upgraded, the current seat is automatically released; if not, the current seat
+                            is preserved.</li>
+                    </ul>
+                </li>
             </ul>
+            <div class="callout-box info">
+                <div class="callout-title">💡 HOW UPWARD MOVEMENT SAVES SEATS</div>
+                If you opt for Upward Movement, you do NOT lose your current seat. The system holds your seat. In the
+                next round, if a seat in your higher preferences becomes available, you get the new seat and your old
+                seat is given to someone else. If no upgrade is possible, you keep your original seat.
+            </div>
         </div>
     </section>
 
@@ -1134,14 +1764,290 @@
         <div class="container">
             <h2 class="section-title">Step 5: Reporting to the Allotted Institute</h2>
             <p>
-                Once a seat is allotted and the candidate is satisfied, they must secure their admission.
+                To finalize your admission, you must report physically to the allotted college. If you fail to report
+                within the specified dates, your allotment will be cancelled automatically.
             </p>
             <ul>
-                <li>Download the provisional allotment letter.</li>
-                <li>Report to the allotted college within the specified dates along with original documents and photocopies.</li>
-                <li>Pay the requisite admission/tuition fee at the institute to confirm the seat.</li>
-                <li>If a candidate wishes to upgrade their seat in the next round, they can opt for <a href="/mp-dte-upward-movement" style="text-decoration: underline;"><b>Upward Movement</b></a> during reporting.</li>
+                <li><strong>Report within Deadline:</strong> DTE provides a window of 4–5 working days for reporting.
+                    Plan your travel accordingly. Check the college's operational hours.</li>
+                <li><strong>Physical Verification:</strong> The admission committee of the allotted college will
+                    physically inspect all your original documents and compare them with the online verification slip.
+                </li>
+                <li><strong>Fee Clearance:</strong> Pay the remaining first-semester tuition fee directly at the college
+                    counter (through online transfer, bank challan, or Demand Draft as specified by the college).</li>
+                <li><strong>Admission Confirmation:</strong> The college will issue an official Admission Confirmation
+                    Letter. Keep this letter safe; it confirms your enrolment.</li>
             </ul>
+
+            <h4 style="margin-top: 20px; color: var(--primary-color);">What to carry: The Reporting Document Kit</h4>
+            <p>Carry the following documents in <b>Original</b> along with <b>3 sets of self-attested photocopies</b>:
+            </p>
+            <ul
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 10px; padding-left: 0; list-style: none;">
+                <li style="position: relative; padding-left: 1.8rem; margin-bottom: 0.5rem;"><span
+                        style="color: var(--primary-color); font-weight: bold; position: absolute; left: 0;">✓</span>
+                    Provisional Allotment Letter</li>
+                <li style="position: relative; padding-left: 1.8rem; margin-bottom: 0.5rem;"><span
+                        style="color: var(--primary-color); font-weight: bold; position: absolute; left: 0;">✓</span>
+                    Online Verification Slip</li>
+                <li style="position: relative; padding-left: 1.8rem; margin-bottom: 0.5rem;"><span
+                        style="color: var(--primary-color); font-weight: bold; position: absolute; left: 0;">✓</span>
+                    JEE Main Admit Card & Rank Card</li>
+                <li style="position: relative; padding-left: 1.8rem; margin-bottom: 0.5rem;"><span
+                        style="color: var(--primary-color); font-weight: bold; position: absolute; left: 0;">✓</span>
+                    Class 10th Marksheet (as age proof)</li>
+                <li style="position: relative; padding-left: 1.8rem; margin-bottom: 0.5rem;"><span
+                        style="color: var(--primary-color); font-weight: bold; position: absolute; left: 0;">✓</span>
+                    Class 12th Marksheet & Certificate</li>
+                <li style="position: relative; padding-left: 1.8rem; margin-bottom: 0.5rem;"><span
+                        style="color: var(--primary-color); font-weight: bold; position: absolute; left: 0;">✓</span>
+                    Transfer Certificate (TC) & Migration Certificate</li>
+                <li style="position: relative; padding-left: 1.8rem; margin-bottom: 0.5rem;"><span
+                        style="color: var(--primary-color); font-weight: bold; position: absolute; left: 0;">✓</span>
+                    Domicile, Category, & Income Certificates</li>
+                <li style="position: relative; padding-left: 1.8rem; margin-bottom: 0.5rem;"><span
+                        style="color: var(--primary-color); font-weight: bold; position: absolute; left: 0;">✓</span>
+                    Gap Certificate (if applicable, on Stamp Paper)</li>
+                <li style="position: relative; padding-left: 1.8rem; margin-bottom: 0.5rem;"><span
+                        style="color: var(--primary-color); font-weight: bold; position: absolute; left: 0;">✓</span> 4
+                    Passport-sized recent photographs</li>
+                <li style="position: relative; padding-left: 1.8rem; margin-bottom: 0.5rem;"><span
+                        style="color: var(--primary-color); font-weight: bold; position: absolute; left: 0;">✓</span>
+                    Aadhaar Card (Photocopy)</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- INTERACTIVE DOCUMENTS CHECKLIST -->
+    <section class="section" style="background: var(--bg-light);">
+        <div class="container">
+            <h2 class="section-title">Interactive Documents Checklist</h2>
+            <p style="text-align: center; max-width: 700px; margin: 0 auto 30px auto;">
+                Prepare these documents in advance to avoid rejection during online verification. Check off the
+                documents you have ready to track your progress!
+            </p>
+
+            <div class="checklist-container">
+                <div class="checklist-progress-bar-wrapper">
+                    <div class="checklist-progress-text">Documents Ready: <span id="checklist-pct">0%</span> (<span
+                            id="checklist-count">0</span> of <span id="checklist-total">8</span>)</div>
+                    <div class="checklist-progress-bg">
+                        <div class="checklist-progress-fill" id="checklist-fill" style="width: 0%;"></div>
+                    </div>
+                </div>
+
+                <div class="checklist-grid">
+                    <div class="checklist-item">
+                        <label class="checkbox-label">
+                            <input type="checkbox" class="doc-checkbox" data-doc-id="jee-admit">
+                            <span class="checkbox-custom"></span>
+                            <div class="doc-details">
+                                <span class="doc-name">JEE Main Admit Card 2026</span>
+                                <span class="doc-desc">Official admit card printout.</span>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="checklist-item">
+                        <label class="checkbox-label">
+                            <input type="checkbox" class="doc-checkbox" data-doc-id="jee-score">
+                            <span class="checkbox-custom"></span>
+                            <div class="doc-details">
+                                <span class="doc-name">JEE Main Result / Rank Card</span>
+                                <span class="doc-desc">CRL or Category rank card.</span>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="checklist-item">
+                        <label class="checkbox-label">
+                            <input type="checkbox" class="doc-checkbox" data-doc-id="class-10">
+                            <span class="checkbox-custom"></span>
+                            <div class="doc-details">
+                                <span class="doc-name">Class 10th Marksheet & Certificate</span>
+                                <span class="doc-desc">Used for Date of Birth proof.</span>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="checklist-item">
+                        <label class="checkbox-label">
+                            <input type="checkbox" class="doc-checkbox" data-doc-id="class-12">
+                            <span class="checkbox-custom"></span>
+                            <div class="doc-details">
+                                <span class="doc-name">Class 12th Marksheet & Certificate</span>
+                                <span class="doc-desc">For verification of eligibility subjects and marks.</span>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="checklist-item">
+                        <label class="checkbox-label">
+                            <input type="checkbox" class="doc-checkbox" data-doc-id="mp-domicile">
+                            <span class="checkbox-custom"></span>
+                            <div class="doc-details">
+                                <span class="doc-name">MP Domicile Certificate</span>
+                                <span class="doc-desc">Required to claim MP state quota (90% seats).</span>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="checklist-item">
+                        <label class="checkbox-label">
+                            <input type="checkbox" class="doc-checkbox" data-doc-id="cat-cert">
+                            <span class="checkbox-custom"></span>
+                            <div class="doc-details">
+                                <span class="doc-name">Category Certificate (if applicable)</span>
+                                <span class="doc-desc">SC/ST/OBC (NCL) certificate issued by MP Gov.</span>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="checklist-item">
+                        <label class="checkbox-label">
+                            <input type="checkbox" class="doc-checkbox" data-doc-id="inc-cert">
+                            <span class="checkbox-custom"></span>
+                            <div class="doc-details">
+                                <span class="doc-name">Income Certificate</span>
+                                <span class="doc-desc">For Tuition Fee Waiver (TFW) or OBC category benefits.</span>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="checklist-item">
+                        <label class="checkbox-label">
+                            <input type="checkbox" class="doc-checkbox" data-doc-id="id-proof">
+                            <span class="checkbox-custom"></span>
+                            <div class="doc-details">
+                                <span class="doc-name">Aadhar Card / Photo ID Proof</span>
+                                <span class="doc-desc">General identification proof matching your details.</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <div style="text-align: right; margin-top: 20px;">
+                    <button type="button" class="btn" id="reset-checklist-btn"
+                        style="background: transparent; border: 1px solid var(--border-color); color: var(--text-medium); font-size: 0.9rem; padding: 8px 18px; box-shadow: none;">Reset
+                        Checklist</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COUNSELLING ROUNDS OVERVIEW -->
+    <section class="section" style="background: var(--bg-white);">
+        <div class="container">
+            <h2 class="section-title">MP DTE Counselling Rounds Overview</h2>
+            <p style="text-align: center; max-width: 700px; margin: 0 auto 30px auto;">
+                The MP DTE B.Tech counselling is conducted in three main sequential rounds to fill seats across various
+                institutes.
+            </p>
+
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 20%;">Round</th>
+                            <th style="width: 25%;">Admission Basis</th>
+                            <th style="width: 30%;">Target Candidates</th>
+                            <th style="width: 25%;">Allotment Quota</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="font-weight: bold; color: var(--primary-color);">Round 1 (First Phase)</td>
+                            <td>JEE Main Score / CRL Rank</td>
+                            <td>MP State Domicile & Outside MP (All India) candidates.</td>
+                            <td>Home State Quota (90%) + All India Quota (10%).</td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: bold; color: var(--primary-color);">Round 2 (Second Phase)</td>
+                            <td>JEE Main Ranks / Class 12 Marks</td>
+                            <td>Candidates who missed Round 1 or want to upgrade their seats, plus non-JEE candidates.
+                            </td>
+                            <td>Vacant seats after Round 1. JEE rank candidates get higher priority than Class 12
+                                candidates.</td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: bold; color: var(--primary-color);">CLC Round (College Level)</td>
+                            <td>Class 12 Marks / Merit List</td>
+                            <td>Direct physical reporting at respective colleges. Open to all unregistered/vacant
+                                candidates.</td>
+                            <td>Final vacant seats at the institutional level. Spot admission.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- TOP COLLEGES -->
+    <section class="section" style="background: var(--bg-light);">
+        <div class="container">
+            <h2 class="section-title">Top Engineering Colleges under MP DTE</h2>
+            <p style="text-align: center; max-width: 700px; margin: 0 auto 30px auto;">
+                Here are the top Government and Government-aided colleges participating in MP DTE counselling, known for
+                their academic reputation and placements.
+            </p>
+
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>College Name</th>
+                            <th>Location</th>
+                            <th>Type</th>
+                            <th>Est. Year</th>
+                            <th>Average Package (B.Tech)</th>
+                            <th>Official Website Link</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="font-weight: 600; color: var(--primary-color);">Shri Govindram Seksaria Institute
+                                of Technology and Science (SGSITS)</td>
+                            <td>Indore</td>
+                            <td>Govt. Aided</td>
+                            <td>1952</td>
+                            <td style="font-weight: 600; color: var(--secondary-color);">8.5 LPA</td>
+                            <td><a href="https://sgsits.ac.in" target="_blank" rel="noopener">sgsits.ac.in ↗</a></td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: 600; color: var(--primary-color);">Institute of Engineering and
+                                Technology, DAVV (IET DAVV)</td>
+                            <td>Indore</td>
+                            <td>State University Dept.</td>
+                            <td>1996</td>
+                            <td style="font-weight: 600; color: var(--secondary-color);">7.2 LPA</td>
+                            <td><a href="https://ietdavv.edu.in" target="_blank" rel="noopener">ietdavv.edu.in ↗</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: 600; color: var(--primary-color);">Jabalpur Engineering College
+                                (JEC)</td>
+                            <td>Jabalpur</td>
+                            <td>Government</td>
+                            <td>1947</td>
+                            <td style="font-weight: 600; color: var(--secondary-color);">6.0 LPA</td>
+                            <td><a href="https://jecjabalpur.ac.in" target="_blank" rel="noopener">jecjabalpur.ac.in
+                                    ↗</a></td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: 600; color: var(--primary-color);">Madhav Institute of Technology
+                                and Science (MITS)</td>
+                            <td>Gwalior</td>
+                            <td>Govt. Aided</td>
+                            <td>1957</td>
+                            <td style="font-weight: 600; color: var(--secondary-color);">5.5 LPA</td>
+                            <td><a href="https://mitsgwalior.in" target="_blank" rel="noopener">mitsgwalior.in ↗</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: 600; color: var(--primary-color);">Samrat Ashok Technological
+                                Institute (SATI)</td>
+                            <td>Vidisha</td>
+                            <td>Govt. Aided</td>
+                            <td>1960</td>
+                            <td style="font-weight: 600; color: var(--secondary-color);">4.8 LPA</td>
+                            <td><a href="https://satiengg.in" target="_blank" rel="noopener">satiengg.in ↗</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </section>
 
@@ -1151,20 +2057,81 @@
             <h2 class="section-title">Frequently Asked Questions (FAQs)</h2>
             <div class="faq-item">
                 <h3 class="faq-question">1. Is physical presence required for document verification?</h3>
-                <p class="faq-answer">Generally, document verification is conducted online. However, if any issues arise with the uploaded documents, candidates may be directed to visit a nodal center.</p>
+                <p class="faq-answer">Generally, document verification is conducted online. However, if any issues arise
+                    with the uploaded documents, candidates may be directed to visit a nodal center.</p>
             </div>
             <div class="faq-item">
                 <h3 class="faq-question">2. What happens if I forget to lock my choices?</h3>
-                <p class="faq-answer">If you forget to lock your choices manually, the system will automatically lock your last saved choices after the deadline expires.</p>
+                <p class="faq-answer">If you forget to lock your choices manually, the system will automatically lock
+                    your last saved choices after the deadline expires.</p>
             </div>
             <div class="faq-item">
                 <h3 class="faq-question">3. Can I change my choices after locking them?</h3>
-                <p class="faq-answer">No, once the choices are locked, they cannot be modified. Make sure to review them carefully before locking.</p>
+                <p class="faq-answer">No, once the choices are locked, they cannot be modified. Make sure to review them
+                    carefully before locking.</p>
+            </div>
+            <div class="faq-item">
+                <h3 class="faq-question">4. What is the Tuition Fee Waiver (TFW) scheme and who is eligible?</h3>
+                <p class="faq-answer">The TFW scheme is an MP government initiative that waives 100% of the tuition fee
+                    for eligible students. To qualify, you must be a resident of Madhya Pradesh, your total family
+                    income must be less than Rs. 8 Lakhs per annum, and you must apply for TFW during registration.</p>
+            </div>
+            <div class="faq-item">
+                <h3 class="faq-question">5. Can I participate in Round 2 if I am satisfied with my Round 1 seat?</h3>
+                <p class="faq-answer">If you are satisfied, you should "Freeze" the seat and complete the admission. If
+                    you participate in Round 2 and get allocated a new seat, your Round 1 seat will be cancelled
+                    automatically, even if you like the first seat better. Only participate in Round 2 if you want an
+                    upgrade.</p>
+            </div>
+            <div class="faq-item">
+                <h3 class="faq-question">6. How does College Level Counselling (CLC) round work?</h3>
+                <p class="faq-answer">CLC is the final spot admission phase conducted directly at the individual college
+                    campus. Candidates must physically report to the college of their choice with all original documents
+                    and fees. Seats are offered on the spot based on the merit list of candidates present on that
+                    specific day.</p>
             </div>
         </div>
     </section>
 
-
+    <!-- HELPLINE & CONTACT INFO -->
+    <section class="section" style="background: var(--bg-white);">
+        <div class="container">
+            <div class="helpline-card">
+                <div class="helpline-header">
+                    <h2
+                        style="margin-top: 0; color: var(--primary-color); font-size: 1.8rem; font-family: var(--font-family-heading);">
+                        MP DTE Counselling Support & Contact Info</h2>
+                    <div class="yellow-line" style="margin: 10px 0 20px 0;"></div>
+                </div>
+                <div class="helpline-grid">
+                    <div class="helpline-item">
+                        <h4>Official Website</h4>
+                        <p>For registration, choice filling, and official schedule:</p>
+                        <a href="https://dte.mponline.gov.in" class="btn" target="_blank" rel="noopener"
+                            style="font-size: 0.9rem; padding: 8px 18px; margin-top: 10px; display: inline-block;">dte.mponline.gov.in
+                            ↗</a>
+                    </div>
+                    <div class="helpline-item">
+                        <h4>DTE Helpline Numbers</h4>
+                        <p>Phone support is active from 10:00 AM to 5:00 PM on working days:</p>
+                        <p
+                            style="font-size: 1.25rem; font-weight: 700; color: var(--secondary-color); margin-top: 10px; font-family: var(--font-family-heading);">
+                            📞 0755-6720200<br>
+                            📞 0755-6679300
+                        </p>
+                    </div>
+                    <div class="helpline-item">
+                        <h4>Helpdesk Email</h4>
+                        <p>Send your queries or complaints directly to DTE MP Support:</p>
+                        <p
+                            style="font-size: 1.15rem; font-weight: 600; color: var(--primary-color); margin-top: 10px; font-family: var(--font-family-heading);">
+                            ✉️ dte.helpdesk@mp.gov.in
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- FOOTER -->
     <footer>
@@ -1196,11 +2163,21 @@
                     if (parent.classList.contains('dropdown')) {
                         // It's a dropdown toggle
                         e.preventDefault();
+
+                        // Close other dropdowns
+                        document.querySelectorAll('.dropdown').forEach(d => {
+                            if (d !== parent) {
+                                d.classList.remove('active');
+                            }
+                        });
+
                         parent.classList.toggle('active');
                     } else {
                         // It's a regular link
                         hamburger.classList.remove('active');
                         navMenu.classList.remove('active');
+                        // Close all dropdowns
+                        document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('active'));
                     }
                 });
             });
@@ -1221,6 +2198,59 @@
                     document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('active'));
                 }
             });
+
+            // Documents Checklist logic
+            const checkboxes = document.querySelectorAll('.doc-checkbox');
+            const pctSpan = document.getElementById('checklist-pct');
+            const countSpan = document.getElementById('checklist-count');
+            const totalSpan = document.getElementById('checklist-total');
+            const progressFill = document.getElementById('checklist-fill');
+            const resetBtn = document.getElementById('reset-checklist-btn');
+
+            if (checkboxes.length > 0 && pctSpan && countSpan && totalSpan && progressFill) {
+                const total = checkboxes.length;
+                totalSpan.textContent = total;
+
+                // Load initial states from LocalStorage
+                checkboxes.forEach(cb => {
+                    const saved = localStorage.getItem('dte_doc_' + cb.dataset.docId);
+                    if (saved === 'checked') {
+                        cb.checked = true;
+                    }
+                });
+
+                function updateProgress() {
+                    let checkedCount = 0;
+                    checkboxes.forEach(cb => {
+                        if (cb.checked) checkedCount++;
+                    });
+
+                    const pct = total > 0 ? Math.round((checkedCount / total) * 100) : 0;
+                    pctSpan.textContent = pct + '%';
+                    countSpan.textContent = checkedCount;
+                    progressFill.style.width = pct + '%';
+                }
+
+                checkboxes.forEach(cb => {
+                    cb.addEventListener('change', () => {
+                        localStorage.setItem('dte_doc_' + cb.dataset.docId, cb.checked ? 'checked' : 'unchecked');
+                        updateProgress();
+                    });
+                });
+
+                if (resetBtn) {
+                    resetBtn.addEventListener('click', () => {
+                        checkboxes.forEach(cb => {
+                            cb.checked = false;
+                            localStorage.removeItem('dte_doc_' + cb.dataset.docId);
+                        });
+                        updateProgress();
+                    });
+                }
+
+                // Initial run
+                updateProgress();
+            }
         });
     </script>
 </body>
